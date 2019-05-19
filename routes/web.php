@@ -16,18 +16,18 @@ $router->get('/', function () use ($router) {
 });
 
 $router->group(['prefix', '/', 'middleware' => App\Http\Middleware\VersionControl::class], function ($router) {
-    $router->post('/auth', 'V{d}\AuthController@post');
-    $router->put('/auth', 'V{d}\AuthController@put');
+    $router->post('/V{d}/auth', 'V{d}\AuthController@post');
+    $router->put('/V{d}/auth', 'V{d}\AuthController@put');
 
-    $router->post('/user', 'V{d}\UserController@post');
+    $router->post('/V{d}/user', 'V{d}\UserController@post');
 
     $router->group(['middleware' => ['auth:api', 'jwt.refresh']], function () use ($router) {
-        $router->delete('/auth', 'V{d}\AuthController@delete');
-        $router->get('/auth', 'V{d}\AuthController@get');
+        $router->delete('/V{d}/auth', 'V{d}\AuthController@delete');
+        $router->get('/V{d}/auth', 'V{d}\AuthController@get');
 
-        $router->get('/products', 'V{d}\ProductController@query');
-        $router->get('/brands', 'V{d}\BrandController@getAll');
+        $router->get('/V{d}/products', 'V{d}\ProductController@query');
+        $router->get('/V{d}/brands', 'V{d}\BrandController@getAll');
 
-        $router->put('/user/{id}', 'V{d}\UserController@put');
+        $router->put('/V{d}/user/{id}', 'V{d}\UserController@put');
     });
 });
