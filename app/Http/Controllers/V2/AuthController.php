@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\V2;
 
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\V1\AuthController as Controller;
 use App\Http\Resources\UserResource;
 use App\Services\AuthService;
 use Illuminate\Http\Request;

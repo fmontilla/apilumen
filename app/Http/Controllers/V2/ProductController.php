@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\V2;
 
 use App\Enums\HttpStatus;
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\V1\ProductController as Controller;
 use App\Services\ProductService;
 use Illuminate\Http\Request;
 

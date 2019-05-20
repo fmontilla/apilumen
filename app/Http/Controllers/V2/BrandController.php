@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\V2;
 
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\V1\BrandController as Controller;
 use App\Services\BrandService;
 
 class BrandController extends Controller
